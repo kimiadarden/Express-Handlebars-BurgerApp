@@ -1,26 +1,54 @@
-<h1>Burgers!</h1>
 
-<h2>Burgers ready to eat!</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#unless sleepy}}
-      {{> burgers/burger-block sleep=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+<div class="container">
+  <div class="col-md-12">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="jumbo-title">Eat-Da-Burger!</h1>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Burgers ready to eat!</h4>
+            <hr>
+            <ul class="list-unstyled">
+              {{#each burgers}}
+              {{#unless sleepy}}
+              {{> burgers/burger-block sleep=true}}
+              {{/unless}}
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+<img class="col-md-12" class="img" src="assets/images/burger.png" alt="Card image cap">    
+  </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Devoured Burgers!</h4>
+            <hr>
+            <ul class="list-unstyled">
+              {{#each burgers}}
+              {{#if sleepy}}
 
-<h2>Devoured Burgers!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if sleepy}}
-
-      {{> burgers/burger-block}}
-    {{/if}}
-  {{/each}}
-</ul>
-
+              {{> burgers/burger-block}}
+              {{/if}}
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
 <h2>Add a Dream Burger</h2>
 <form class="create-form">
 
@@ -34,3 +62,4 @@
   </div>
 
 </form>
+</div>

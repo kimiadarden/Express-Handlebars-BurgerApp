@@ -22,7 +22,7 @@
               {{#each burgers}}
               {{#unless sleepy}}
               
-              "hello"
+              {{> burgers/burger-block sleep=true}}
               {{/unless}}
               {{/each}}
             </ul>
